@@ -26,14 +26,20 @@ To run the project locally, follow these steps:
    ````
    cd laravel-modular-app
    ````
-
-3. Install the project dependencies using Composer:
+3. Copy the .env.example file to a new file named .env:
+   ````
+    cp .env.example .env
+   ````
+   1. Open the .env file in a text editor.
+   2. Modify the values of the variables to match your local environment. The most important variables to set are the database connection variables (DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD).
+   3. Save the .env file.
+4. Install the project dependencies using Composer:
 
    ````
    composer install
    ````
 
-4. Set up the database by creating a new database and running the database migrations:
+5. Set up the database by creating a new database and running the database migrations:
     1. For customer module 
         ````
         php artisan module:migrate Customer
@@ -47,7 +53,7 @@ To run the project locally, follow these steps:
         php artisan module:migrate Cart
         ````
 
-5. Seed the database with sample data (optional):
+6. Seed the database with sample data (optional):
     1. For customer module 
         ````
            php artisan module:seed Customer
@@ -61,13 +67,13 @@ To run the project locally, follow these steps:
            php artisan module:seed Cart
         ````
 
-6. Start the development server:
+7. Start the development server:
 
    ````
    php artisan serve
    ````
 
-7. Access the web application in your browser at `http://localhost:8000`.
+8. Access the web application in your browser at `http://localhost:8000`.
 
 ## Modules
 
